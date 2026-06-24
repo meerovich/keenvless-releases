@@ -1,17 +1,19 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.06.24.3-hysteria",
+  "version": "2026.06.24.6-hysteria",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.06.24.3-hysteria.tar.gz",
-  "size": 540578,
-  "sha256": "cf24e95eb4cb03adb204129c9156eb3daeb914bd92f0f4dc295d921caf960a86",
-  "created_at": 1782286558,
+  "file": "dist/KeenVLESS-update-2026.06.24.6-hysteria.tar.gz",
+  "size": 545995,
+  "sha256": "5029ca6d5aa4adb8cda3d42dbfc3b5315fffd0a5131d2a96ccd81b9cc6cf451c",
+  "created_at": 1782288100,
   "notes": [
     "Backend profile API for provider/manual/Hysteria2 profiles",
     "Safe select with real proxy check and rollback",
     "Hysteria2 diagnostics in health report",
     "Manual profile rename/duplicate endpoints",
-    "Multi-router compare shows protocol/user and duplicate Hysteria2 users"
+    "Multi-router compare shows protocol/user and duplicate Hysteria2 users",
+    "Lightweight HY2/manual profile overlay in the existing web UI",
+    "Versioned enhancer asset with XMLHttpRequest fallback for stricter browser environments"
   ]
 }
