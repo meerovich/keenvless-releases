@@ -1,14 +1,14 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.06.24.8-bootstrap",
+  "version": "2026.06.24.9-rescue",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.06.24.8-bootstrap.tar.gz",
-  "size": 552289,
-  "sha256": "dab38347a44fbcd7e10f58f92727b964e2051487b6bcc8f3750fedb5f5358816",
+  "file": "dist/KeenVLESS-update-2026.06.24.9-rescue.tar.gz",
+  "size": 555751,
+  "sha256": "f69e502916210379bf89763d31da014c072a55c8733d50a1c7879b0b8a48f93f",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1782294604,
+  "created_at": 1782296111,
   "notes": [
     "Backend profile API for provider/manual/Hysteria2 profiles",
     "Safe select with real proxy check and rollback",
@@ -19,6 +19,7 @@
     "Versioned enhancer asset with XMLHttpRequest fallback for stricter browser environments",
     "Dependency Doctor API and UI block for Entware/Xray/lighttpd/cron/routing checks",
     "Generated bootstrap script for clean Keenetic/Netcraze Entware installs",
-    "Standalone dist/keenvless-bootstrap.sh for one-command LAN deployments"
+    "Standalone dist/keenvless-bootstrap.sh for one-command LAN deployments",
+    "Read-only Rescue WireGuard planner: NAT/LAN status plus VPS, Keenetic and operator config artifacts"
   ]
 }
