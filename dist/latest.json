@@ -1,12 +1,14 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.06.24.6-hysteria",
+  "version": "2026.06.24.8-bootstrap",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.06.24.6-hysteria.tar.gz",
-  "size": 545995,
-  "sha256": "5029ca6d5aa4adb8cda3d42dbfc3b5315fffd0a5131d2a96ccd81b9cc6cf451c",
-  "created_at": 1782288100,
+  "file": "dist/KeenVLESS-update-2026.06.24.8-bootstrap.tar.gz",
+  "size": 552289,
+  "sha256": "dab38347a44fbcd7e10f58f92727b964e2051487b6bcc8f3750fedb5f5358816",
+  "bootstrap": "dist/keenvless-bootstrap.sh",
+  "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
+  "created_at": 1782294604,
   "notes": [
     "Backend profile API for provider/manual/Hysteria2 profiles",
     "Safe select with real proxy check and rollback",
@@ -14,6 +16,9 @@
     "Manual profile rename/duplicate endpoints",
     "Multi-router compare shows protocol/user and duplicate Hysteria2 users",
     "Lightweight HY2/manual profile overlay in the existing web UI",
-    "Versioned enhancer asset with XMLHttpRequest fallback for stricter browser environments"
+    "Versioned enhancer asset with XMLHttpRequest fallback for stricter browser environments",
+    "Dependency Doctor API and UI block for Entware/Xray/lighttpd/cron/routing checks",
+    "Generated bootstrap script for clean Keenetic/Netcraze Entware installs",
+    "Standalone dist/keenvless-bootstrap.sh for one-command LAN deployments"
   ]
 }
