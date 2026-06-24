@@ -1,14 +1,14 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.06.24.9-rescue",
+  "version": "2026.06.24.10-ui-stability",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.06.24.9-rescue.tar.gz",
-  "size": 555751,
-  "sha256": "f69e502916210379bf89763d31da014c072a55c8733d50a1c7879b0b8a48f93f",
+  "file": "dist/KeenVLESS-update-2026.06.24.10-ui-stability.tar.gz",
+  "size": 556584,
+  "sha256": "3482021f766ceec729422b294a3157257eefdb6af159363516dab99add7607d3",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1782296111,
+  "created_at": 1782298254,
   "notes": [
     "Backend profile API for provider/manual/Hysteria2 profiles",
     "Safe select with real proxy check and rollback",
@@ -20,6 +20,7 @@
     "Dependency Doctor API and UI block for Entware/Xray/lighttpd/cron/routing checks",
     "Generated bootstrap script for clean Keenetic/Netcraze Entware installs",
     "Standalone dist/keenvless-bootstrap.sh for one-command LAN deployments",
-    "Read-only Rescue WireGuard planner: NAT/LAN status plus VPS, Keenetic and operator config artifacts"
+    "Read-only Rescue WireGuard planner: NAT/LAN status plus VPS, Keenetic and operator config artifacts",
+    "Overlay refresh is single-flight and rate-limited to avoid KeenDNS/CGI 503/504 bursts"
   ]
 }
