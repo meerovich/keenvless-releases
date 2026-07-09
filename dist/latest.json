@@ -1,25 +1,20 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.06.24.12-simple-default",
+  "version": "2026.07.09.2-provider-switch",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.06.24.12-simple-default.tar.gz",
-  "size": 560545,
-  "sha256": "9b47caaf48dff4d4a95c7f1312512915ee3844d352d27d17222c3c8b36240d1c",
+  "file": "dist/KeenVLESS-update-2026.07.09.2-provider-switch.tar.gz",
+  "size": 561162,
+  "sha256": "68f7677f61aae83d111000bd40e0f60bb66de43e582c42bf0387adc4b18f1995",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1782300117,
+  "created_at": 1783611302,
   "notes": [
-    "Backend profile API for provider/manual/Hysteria2 profiles",
-    "Safe select with real proxy check and rollback",
-    "Hysteria2 diagnostics in health report",
-    "Manual profile rename/duplicate endpoints",
-    "Multi-router compare shows protocol/user and duplicate Hysteria2 users",
-    "Dependency Doctor API and UI block for Entware/Xray/lighttpd/cron/routing checks",
-    "Generated bootstrap script for clean Keenetic/Netcraze Entware installs",
-    "Standalone dist/keenvless-bootstrap.sh for one-command LAN deployments",
-    "Read-only Rescue WireGuard planner: NAT/LAN status plus VPS, Keenetic and operator config artifacts",
-    "Overlay refresh is single-flight and rate-limited to avoid KeenDNS/CGI 503/504 bursts",
-    "Simple mode is now the default UI, with expert mode available via expert=1"
+    "Simple mode remains the default, with expert mode available via expert=1",
+    "Provider VLESS profiles are visible in simple mode and can be selected from HY2",
+    "VPN / Profiles overlay now includes provider VLESS entries with check/select actions",
+    "Selection still uses the backend safe select flow with real proxy check and rollback",
+    "Hysteria2 diagnostics and duplicate-user checks remain visible in health output",
+    "Bootstrap and update package target Keenetic/Netcraze Viva deployments with Entware"
   ]
 }
