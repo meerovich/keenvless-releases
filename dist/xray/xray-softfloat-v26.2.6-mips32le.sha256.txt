@@ -1,0 +1,2 @@
+xray_softfloat  dae912f7b88f5ec3898a0582fd749cf9ff2065fca24fc8221298fd4c94b1c2d7
+xray-softfloat-v26.2.6-mips32le.tar.gz  563741c4bfd25dfd3076da5a3f3731de6bb02ce46e00692fc7bd69622e67b39a
