@@ -1,19 +1,19 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.07.10.8-start-wait",
+  "version": "2026.07.10.13-scan-notes",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.07.10.8-start-wait.tar.gz",
-  "size": 566775,
-  "sha256": "db9cb572a66cc2e9c825dfea52710f08a50c2f0b2711418f637426242a22fa54",
+  "file": "dist/KeenVLESS-update-2026.07.10.13-scan-notes.tar.gz",
+  "size": 568202,
+  "sha256": "79ccfdfcfa83e7d8dc36a52ae3122a3ae1662e313a07ca3fb8455d81ec059659",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1783678975,
+  "created_at": 1783687905,
   "notes": [
-    "XRay start now waits for the local SOCKS listener before health verification",
-    "Safe server switching no longer rolls back just because the XRay process exists before the SOCKS port is ready",
-    "Provider diagnostics can test VLESS/Reality profiles without changing the selected profile",
-    "XRay candidate fetch/install helpers are available for controlled recovery on Keenetic MIPS builds",
-    "Hysteria2 support and existing simple/expert UI behavior are preserved"
+    "Provider VLESS scan uses no-mux probe validation to avoid false bad results from XRay mux crashes on Keenetic MIPS builds",
+    "Scan preflight now tolerates known XRay run-test segmentation faults and validates by live SOCKS start where possible",
+    "Scan results now expose note, ip, youtube and latency details in the profiles API and simple/expert UI",
+    "Scan cancel now stops lingering scan/probe processes and resets scan progress counters",
+    "Fast simple UI, Hysteria2 support and safe server switching behavior are preserved"
   ]
 }
