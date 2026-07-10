@@ -1,19 +1,20 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.07.10.13-scan-notes",
+  "version": "2026.07.10.15-yandex-oauth-redirect",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.07.10.13-scan-notes.tar.gz",
-  "size": 568202,
-  "sha256": "79ccfdfcfa83e7d8dc36a52ae3122a3ae1662e313a07ca3fb8455d81ec059659",
+  "file": "dist/KeenVLESS-update-2026.07.10.15-yandex-oauth-redirect.tar.gz",
+  "size": 573206,
+  "sha256": "97004a939927c8a9e1679bcfa16d7ad678e71ef344d1ac2c171fd4085e997b66",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1783687905,
+  "created_at": 1783691094,
   "notes": [
-    "Provider VLESS scan uses no-mux probe validation to avoid false bad results from XRay mux crashes on Keenetic MIPS builds",
-    "Scan preflight now tolerates known XRay run-test segmentation faults and validates by live SOCKS start where possible",
-    "Scan results now expose note, ip, youtube and latency details in the profiles API and simple/expert UI",
-    "Scan cancel now stops lingering scan/probe processes and resets scan progress counters",
-    "Fast simple UI, Hysteria2 support and safe server switching behavior are preserved"
+    "Adds optional Yandex OAuth 2.0 fallback login via authorization-code flow when the URL key is missing",
+    "Yandex login is accepted only after API Yandex ID returns a whitelisted phone number",
+    "OAuth sessions are stored as local HttpOnly Secure SameSite=Lax cookies; legacy URL-key auth remains unchanged",
+    "Explicit Yandex Redirect URI is supported for KeenDNS/Netcraze proxy deployments where CGI sees 127.0.0.1 as HTTP_HOST",
+    "Simple UI now shows a clear Yandex login screen on unauthorized URL-key/cookie state",
+    "Fast simple UI, Hysteria2 support, no-mux VLESS scan validation and safe server switching behavior are preserved"
   ]
 }
