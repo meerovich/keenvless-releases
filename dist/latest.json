@@ -1,20 +1,20 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.07.09.2-provider-switch",
+  "version": "2026.07.10.1-async-select-mobile",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.07.09.2-provider-switch.tar.gz",
-  "size": 561162,
-  "sha256": "68f7677f61aae83d111000bd40e0f60bb66de43e582c42bf0387adc4b18f1995",
+  "file": "dist/KeenVLESS-update-2026.07.10.1-async-select-mobile.tar.gz",
+  "size": 562328,
+  "sha256": "f25c35e0381176a4278b67888e4e4166dcb2416086c7ae500599db9bb62d1f7b",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1783611302,
+  "created_at": 1783669233,
   "notes": [
     "Simple mode remains the default, with expert mode available via expert=1",
-    "Provider VLESS profiles are visible in simple mode and can be selected from HY2",
-    "VPN / Profiles overlay now includes provider VLESS entries with check/select actions",
-    "Selection still uses the backend safe select flow with real proxy check and rollback",
-    "Hysteria2 diagnostics and duplicate-user checks remain visible in health output",
-    "Bootstrap and update package target Keenetic/Netcraze Viva deployments with Entware"
+    "Server switching now uses async safe-select jobs so long checks do not break the browser request",
+    "Failed server switches report job status and keep the previous working profile after rollback",
+    "Mobile layout makes VPN profile action buttons full width and prevents horizontal overflow",
+    "Provider VLESS profiles remain visible in simple and expert modes",
+    "Hysteria2 diagnostics and duplicate-user checks remain visible in health output"
   ]
 }
