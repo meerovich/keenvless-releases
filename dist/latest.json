@@ -1,20 +1,20 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.07.10.15-yandex-oauth-redirect",
+  "version": "2026.07.13.1-api-cache",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.07.10.15-yandex-oauth-redirect.tar.gz",
-  "size": 573206,
-  "sha256": "97004a939927c8a9e1679bcfa16d7ad678e71ef344d1ac2c171fd4085e997b66",
+  "file": "dist/KeenVLESS-update-2026.07.13.1-api-cache.tar.gz",
+  "size": 573855,
+  "sha256": "e002917a5b1c6fb168091d08ee79e7be83436bed452451a902c310a1d97f9ec3",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1783691094,
+  "created_at": 1783955657,
   "notes": [
-    "Adds optional Yandex OAuth 2.0 fallback login via authorization-code flow when the URL key is missing",
-    "Yandex login is accepted only after API Yandex ID returns a whitelisted phone number",
-    "OAuth sessions are stored as local HttpOnly Secure SameSite=Lax cookies; legacy URL-key auth remains unchanged",
-    "Explicit Yandex Redirect URI is supported for KeenDNS/Netcraze proxy deployments where CGI sees 127.0.0.1 as HTTP_HOST",
-    "Simple UI now shows a clear Yandex login screen on unauthorized URL-key/cookie state",
-    "Fast simple UI, Hysteria2 support, no-mux VLESS scan validation and safe server switching behavior are preserved"
+    "Optimizes api.sh request parsing by decoding only parameters that are present in the request",
+    "Replaces byte-by-byte POST body read with head -c for faster CGI request handling",
+    "Adds a short RAM snapshot cache for status and dashboard_summary with automatic invalidation on state-changing actions",
+    "Caches only valid JSON snapshots and keeps cache TTL configurable through KV_STATUS_CACHE_TTL",
+    "Hardens the lazy parameter decoder against shell command substitution in request values",
+    "Yandex OAuth fallback, Hysteria2 support, no-mux VLESS scan validation and safe server switching behavior are preserved"
   ]
 }
