@@ -1,19 +1,19 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.07.14.1-fast-snapshot",
+  "version": "2026.07.14.2-demand-snapshot",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.07.14.1-fast-snapshot.tar.gz",
-  "size": 575390,
-  "sha256": "6a4b1bd04e7201418fcad8dbda40c3c3facaaec0209e6fb9929cd94fb5d3f8a6",
+  "file": "dist/KeenVLESS-update-2026.07.14.2-demand-snapshot.tar.gz",
+  "size": 580843,
+  "sha256": "abe076994490eeeb865c8611067711fd162b365a556771d4ce2b1f7d97ca0884",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1784017774,
+  "created_at": 1784021744,
   "notes": [
-    "Adds a home_snapshot endpoint: status and profiles are prepared in parallel behind one CGI request",
-    "Extends the RAM JSON cache to profiles, alerts, metrics history, health history and router info with conservative TTLs",
-    "Invalidates all cached reads before actions that can change VPN selection, routes, scans, health or service state",
-    "Keeps the simple interface compatible through a legacy-request fallback if a snapshot is unavailable",
-    "Does not change VPN configuration, profile switching, OAuth, Hysteria2 or XRay routing behavior"
+    "Adds a compact, sanitized overview snapshot stored only in tmpfs and refreshed on demand in the background",
+    "Renders the simple interface immediately from a short-lived per-tab snapshot, then refreshes it without blocking the page",
+    "Invalidates the overview before mutating actions and prevents an older background read from overwriting newer state",
+    "Falls back to the existing live home_snapshot request while the first overview is warming",
+    "Does not change VPN configuration, profile switching, OAuth, Hysteria2, XRay routing or startup services"
   ]
 }
