@@ -1,19 +1,21 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.07.14.7-safe-endpoint-scan",
+  "version": "2026.07.14.8-manual-endpoint-scan",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.07.14.7-safe-endpoint-scan.tar.gz",
-  "size": 1170994,
-  "sha256": "70ba843e708bc9582720b01a9639b8a3b3040965f9dba209ffc125cac3519a6d",
+  "file": "dist/KeenVLESS-update-2026.07.14.8-manual-endpoint-scan.tar.gz",
+  "size": 1171930,
+  "sha256": "4d157bc616907ec49d1b88a558cbaaaf643b49f0c2630cdef494245f4daf6f92",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1784032929,
+  "created_at": 1784036032,
   "notes": [
     "Creates and validates an application backup before installation and automatically restores it if post-install validation fails",
     "Ships an independent rollback endpoint with the proven 2026.07.14.2 release; rollback does not change VPN configuration",
     "Installs the web tree atomically, validates the running API and cleans abandoned update sessions",
-    "Replaces the memory-heavy second-Xray mass scan with TCP endpoint reachability and latency checks; the active profile still gets a full tunnel check",
+    "Includes manual profiles in individual and mass availability scans without switching the active VPN profile",
+    "Checks inactive manual VLESS profiles by TCP endpoint latency, checks the active manual profile through the real tunnel and reports inactive UDP Hysteria2 profiles as unknown instead of unavailable",
+    "Keeps the memory-safe scan design and never starts a second Xray process",
     "Does not change profile selection, XRay startup, Hysteria2, OAuth or routing logic"
   ]
 }
