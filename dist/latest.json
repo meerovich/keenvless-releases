@@ -1,21 +1,21 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.07.14.8-manual-endpoint-scan",
+  "version": "2026.07.14.15-fast-expert-entry",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.07.14.8-manual-endpoint-scan.tar.gz",
-  "size": 1171930,
-  "sha256": "4d157bc616907ec49d1b88a558cbaaaf643b49f0c2630cdef494245f4daf6f92",
+  "file": "dist/KeenVLESS-update-2026.07.14.15-fast-expert-entry.tar.gz",
+  "size": 1176721,
+  "sha256": "294d1367ded80b5ca2f49495c41b15c4190675e4816132aa3251cbb246ccdfa6",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1784036032,
+  "created_at": 1784040882,
   "notes": [
-    "Creates and validates an application backup before installation and automatically restores it if post-install validation fails",
-    "Ships an independent rollback endpoint with the proven 2026.07.14.2 release; rollback does not change VPN configuration",
-    "Installs the web tree atomically, validates the running API and cleans abandoned update sessions",
+    "Keeps both rollback tiers: the proven embedded 2026.07.14.2 release and a reversible previous-application backup; neither changes VPN configuration",
+    "Uses short-lived validated RAM caches, stale-while-revalidate overview data and one-time completion invalidation instead of clearing every cache on scan/select polling or update upload chunks",
+    "Aggregates expert status, profiles and manual profile details in one endpoint, caches the final aggregate and emits compact JSON to reduce KeenDNS round trips and payload size",
+    "Opens expert mode on the fast Servers tab and loads the VPN profile enhancer in parallel with the legacy Angular interface",
     "Includes manual profiles in individual and mass availability scans without switching the active VPN profile",
-    "Checks inactive manual VLESS profiles by TCP endpoint latency, checks the active manual profile through the real tunnel and reports inactive UDP Hysteria2 profiles as unknown instead of unavailable",
-    "Keeps the memory-safe scan design and never starts a second Xray process",
+    "Adds parameter-free five-minute API performance telemetry and reproducible performance, cache-flow, safety, endpoint-scan and rollback checks",
     "Does not change profile selection, XRay startup, Hysteria2, OAuth or routing logic"
   ]
 }
