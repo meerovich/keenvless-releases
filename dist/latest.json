@@ -1,19 +1,19 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.07.14.2-demand-snapshot",
+  "version": "2026.07.14.7-safe-endpoint-scan",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.07.14.2-demand-snapshot.tar.gz",
-  "size": 580843,
-  "sha256": "abe076994490eeeb865c8611067711fd162b365a556771d4ce2b1f7d97ca0884",
+  "file": "dist/KeenVLESS-update-2026.07.14.7-safe-endpoint-scan.tar.gz",
+  "size": 1170994,
+  "sha256": "70ba843e708bc9582720b01a9639b8a3b3040965f9dba209ffc125cac3519a6d",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1784021744,
+  "created_at": 1784032929,
   "notes": [
-    "Adds a compact, sanitized overview snapshot stored only in tmpfs and refreshed on demand in the background",
-    "Renders the simple interface immediately from a short-lived per-tab snapshot, then refreshes it without blocking the page",
-    "Invalidates the overview before mutating actions and prevents an older background read from overwriting newer state",
-    "Falls back to the existing live home_snapshot request while the first overview is warming",
-    "Does not change VPN configuration, profile switching, OAuth, Hysteria2, XRay routing or startup services"
+    "Creates and validates an application backup before installation and automatically restores it if post-install validation fails",
+    "Ships an independent rollback endpoint with the proven 2026.07.14.2 release; rollback does not change VPN configuration",
+    "Installs the web tree atomically, validates the running API and cleans abandoned update sessions",
+    "Replaces the memory-heavy second-Xray mass scan with TCP endpoint reachability and latency checks; the active profile still gets a full tunnel check",
+    "Does not change profile selection, XRay startup, Hysteria2, OAuth or routing logic"
   ]
 }
