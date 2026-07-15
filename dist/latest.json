@@ -1,20 +1,21 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.07.15.1-fast-overview",
+  "version": "2026.07.15.4-ui-rhythm",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.07.15.1-fast-overview.tar.gz",
-  "size": 1177486,
-  "sha256": "9675dab1b22c02d0aa2108551a3a453e8052e8f27606549d74ee0a127bba2465",
+  "file": "dist/KeenVLESS-update-2026.07.15.4-ui-rhythm.tar.gz",
+  "size": 1181020,
+  "sha256": "4321f8711adab972e3238ff4edb1f99efaf17e051f5c21b03eca2b06414f4aea",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1784101808,
+  "created_at": 1784108610,
   "notes": [
-    "Removes the unnecessary first-session Angular reload while retaining release-versioned browser assets",
-    "Renders expert Overview from the already loaded status immediately and fills secondary read-only panels in bounded background stages with at most two concurrent API calls",
-    "Caches external-IP and traffic-plan reads and extends invalidation-aware TTLs for dashboard, metrics, alerts and router information",
+    "Adds consistent desktop and mobile panel padding plus a shared vertical-rhythm rule for every adjacent structural block on all expert tabs",
+    "Unifies control heights and action groups and guarantees 44-pixel mobile touch targets without horizontal overflow",
+    "Adds visible server-filter labels, clearer XRay and maintenance actions, accessible favourite controls and Russian health/profile wording",
+    "Retains the progressive expert Overview, bounded background loading and invalidation-aware API caches from 2026.07.15.1",
     "Keeps both rollback tiers: the proven embedded 2026.07.14.2 release and a reversible previous-application backup; neither changes VPN configuration",
-    "Includes browser, BusyBox, cache-flow, safety, endpoint-scan and rollback regression checks",
+    "Includes desktop/mobile browser checks plus BusyBox, cache-flow, safety, endpoint-scan and rollback regression checks",
     "Does not change profile selection, XRay startup, Hysteria2, OAuth or routing logic"
   ]
 }
