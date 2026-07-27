@@ -1,21 +1,23 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.07.15.10-native-c-state",
+  "version": "2026.07.27.7-parallel-router-monitoring",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.07.15.10-native-c-state.tar.gz",
-  "size": 1187711,
-  "sha256": "d907a2514605d9bd93879e769760836de00fbc105fde6713f19e380d78e5818d",
+  "file": "dist/KeenVLESS-update-2026.07.27.7-parallel-router-monitoring.tar.gz",
+  "size": 1199618,
+  "sha256": "0f6a420702a27786435c8867ababf18e4b26963cc50f1264c8ef26806ebcedc8",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1784122914,
+  "created_at": 1785151006,
   "notes": [
-    "Adds an opt-in static MIPSLE C read backend with a verified shell fallback; all mutations and VPN control remain in the established shell implementation",
-    "Keeps the native process loopback-only, single-threaded and cache-only, with no shell execution, outbound network access or VPN mutation capability",
-    "Adds fail-closed activation, immediate status-cache synchronization, startup and runtime memory guards, health monitoring and automatic shell recovery",
-    "Measured on Viva KN-1910 at 304-384 KiB RSS with one thread, while preserving more than 24 MiB of available memory under the tested workload",
-    "Verified forced native-daemon outage, cache expiry, 100-request benchmark, semantic parity and an unchanged active VLESS route",
-    "Keeps both rollback tiers ready: embedded 2026.07.14.2-demand-snapshot and reversible previous application 2026.07.15.9-native-c",
-    "Includes BusyBox syntax, cache-flow, native-memory, API safety, rollback, desktop and mobile Playwright regression checks"
+    "Adds persistent router uptime and reboot history with reset-reason and crash-dump evidence when the platform exposes it",
+    "Monitors direct WAN connectivity independently from the VPN route and tracks consecutive failures and recovery timestamps",
+    "Parses both JSON and native Keenetic ndmc text output to monitor the cloud agent and KeenDNS state reliably on Viva KN-1910",
+    "Detects configured remote Syslog destinations without changing the router configuration and exposes the result in diagnostics",
+    "Reduces scheduled load to one minute-level route guard while watchdog, mobile and router monitoring use their configured intervals",
+    "Adds router, reboot, WAN, KeenDNS and Syslog status to the default simple dashboard and health/alert reports",
+    "Runs independent WAN and Keenetic probes concurrently and retains bounded persistent histories under /opt",
+    "Verified on Home with VLESS Berlin profile 49 and on Dacha with Hysteria2 user3, preserving both VPN routes and two rollback tiers",
+    "Includes BusyBox syntax, monitoring fixtures for JSON and Keenetic ANSI text, API/cache/performance, rollback, desktop and mobile Playwright checks"
   ]
 }
