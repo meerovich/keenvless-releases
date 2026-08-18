@@ -1,23 +1,23 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.07.27.7-parallel-router-monitoring",
+  "version": "2026.08.18.3-safe-vpn-recovery",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.07.27.7-parallel-router-monitoring.tar.gz",
-  "size": 1199618,
-  "sha256": "0f6a420702a27786435c8867ababf18e4b26963cc50f1264c8ef26806ebcedc8",
+  "file": "dist/KeenVLESS-update-2026.08.18.3-safe-vpn-recovery.tar.gz",
+  "size": 1822131,
+  "sha256": "465bde18bf9d8dee65851c956d68780d97ad24151518b4bb45ef6898209acd7a",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1785151006,
+  "created_at": 1787064534,
   "notes": [
-    "Adds persistent router uptime and reboot history with reset-reason and crash-dump evidence when the platform exposes it",
-    "Monitors direct WAN connectivity independently from the VPN route and tracks consecutive failures and recovery timestamps",
-    "Parses both JSON and native Keenetic ndmc text output to monitor the cloud agent and KeenDNS state reliably on Viva KN-1910",
-    "Detects configured remote Syslog destinations without changing the router configuration and exposes the result in diagnostics",
-    "Reduces scheduled load to one minute-level route guard while watchdog, mobile and router monitoring use their configured intervals",
-    "Adds router, reboot, WAN, KeenDNS and Syslog status to the default simple dashboard and health/alert reports",
-    "Runs independent WAN and Keenetic probes concurrently and retains bounded persistent histories under /opt",
-    "Verified on Home with VLESS Berlin profile 49 and on Dacha with Hysteria2 user3, preserving both VPN routes and two rollback tiers",
-    "Includes BusyBox syntax, monitoring fixtures for JSON and Keenetic ANSI text, API/cache/performance, rollback, desktop and mobile Playwright checks"
+    "Restarts a live-but-unresponsive XRay process after bounded consecutive failures, but only when direct WAN connectivity is available",
+    "Serializes VPN mutations and watchdog runs so manual selection, recovery and automatic switching cannot race each other",
+    "Verifies every automatic server switch and records a failed candidate instead of reporting a false success",
+    "Stops repeated direct-fallback events from exhausting the anti-flap switch limit and restores the configured five-minute watchdog cadence",
+    "Makes browser server selection resumable across KeenDNS interruptions and page reloads",
+    "Adds idempotency keys to asynchronous selection so a lost HTTP response can be retried without launching duplicate VPN changes",
+    "Makes repeated update-apply requests idempotent and preserves an immediate previous-version rollback plus the embedded stable rollback",
+    "Installed and verified on Home: profile 143 remained healthy; profiles 204, 249, 150 and 53 failed full-tunnel validation and safely rolled back",
+    "Verified with Playwright on desktop and 390x844 mobile viewport; mobile profile buttons are visible, enabled, full-width and have no horizontal overflow"
   ]
 }
