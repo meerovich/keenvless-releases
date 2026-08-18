@@ -1,23 +1,24 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.08.18.3-safe-vpn-recovery",
+  "version": "2026.08.18.4-vpn-correctness",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.08.18.3-safe-vpn-recovery.tar.gz",
-  "size": 1822131,
-  "sha256": "465bde18bf9d8dee65851c956d68780d97ad24151518b4bb45ef6898209acd7a",
+  "file": "dist/KeenVLESS-update-2026.08.18.4-vpn-correctness.tar.gz",
+  "size": 1824394,
+  "sha256": "61b1212202c496f2bd7bf90553df1092c3d60e1da2b4f07101be132c35c905ea",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1787064534,
+  "created_at": 1787065959,
   "notes": [
-    "Restarts a live-but-unresponsive XRay process after bounded consecutive failures, but only when direct WAN connectivity is available",
-    "Serializes VPN mutations and watchdog runs so manual selection, recovery and automatic switching cannot race each other",
-    "Verifies every automatic server switch and records a failed candidate instead of reporting a false success",
-    "Stops repeated direct-fallback events from exhausting the anti-flap switch limit and restores the configured five-minute watchdog cadence",
-    "Makes browser server selection resumable across KeenDNS interruptions and page reloads",
-    "Adds idempotency keys to asynchronous selection so a lost HTTP response can be retried without launching duplicate VPN changes",
-    "Makes repeated update-apply requests idempotent and preserves an immediate previous-version rollback plus the embedded stable rollback",
-    "Installed and verified on Home: profile 143 remained healthy; profiles 204, 249, 150 and 53 failed full-tunnel validation and safely rolled back",
-    "Verified with Playwright on desktop and 390x844 mobile viewport; mobile profile buttons are visible, enabled, full-width and have no horizontal overflow"
+    "Replaces the single api.ipify WAN dependency with five parallel independent probes and records which endpoint succeeded",
+    "Separates TCP endpoint reachability from a verified full VPN tunnel and prevents a recent failed full-tunnel result from being overwritten by a lightweight probe",
+    "Never restarts a saved VPN selection command during page reload; the UI only resumes observation of a job that the router already knows",
+    "Binds every asynchronous selection idempotency key to one server and preserves it through browser polling",
+    "Makes VPN operation locks resistant to stale directories and operating-system PID reuse",
+    "Stops status and configuration APIs from returning the permanent web credential while preserving it when the masked UI field is left blank",
+    "Corrects post-update current-server verification, marks old health reports as stale and shows the age and kind of profile checks",
+    "Verifies rollback through the restored tunnel before reporting a successful recovery",
+    "Installed and verified on Home and Dacha without changing profiles, routes or VPN exit addresses",
+    "Verified through API, desktop Playwright and mobile Playwright; both routers retained working rollback chains"
   ]
 }
