@@ -1,20 +1,21 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.08.19.9-auth-hardening",
+  "version": "2026.08.19.15-audit-hardening",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.08.19.9-auth-hardening.tar.gz",
-  "size": 1251491,
-  "sha256": "37dbe158c7005401e8ddbc34532349af37cf797896b33b690eee30c119716a89",
+  "file": "dist/KeenVLESS-update-2026.08.19.15-audit-hardening.tar.gz",
+  "size": 1018639,
+  "sha256": "940360df3daf3db440af5ab5b9868b9a3ef35698e0df25c623051e2cef85193b",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1787146605,
+  "created_at": 1787151960,
   "notes": [
-    "Requires POST for every API operation that changes router or panel state",
-    "Adds same-origin request validation for Yandex OAuth sessions",
-    "Removes the access credential from the browser address bar and history after loading",
-    "Adds a restrictive content security policy and disables referrer leakage",
-    "Embeds a compact verified 2026.08.19.8-runtime-reliability emergency rollback",
-    "Installed and verified on Home and Dacha without changing selected VPN profiles"
+    "Creates portable streaming application backups without requiring an external gzip executable",
+    "Keeps a verified previous-version rollback through repeated updates and storage cleanup",
+    "Clears stale terminal update fields when a compacted upload session is resumed",
+    "Adds explicit mobile server selection controls and removes legacy icon font payloads",
+    "Requires POST for route and native backend guards in addition to all other mutating API actions",
+    "Embeds a verified 2026.08.19.9-auth-hardening emergency rollback",
+    "Installed and audited on Home and Dacha without changing selected VPN profiles"
   ]
 }
