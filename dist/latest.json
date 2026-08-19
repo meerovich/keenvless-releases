@@ -1,24 +1,22 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.08.18.4-vpn-correctness",
+  "version": "2026.08.19.1-storage-scheduler",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.08.18.4-vpn-correctness.tar.gz",
-  "size": 1824394,
-  "sha256": "61b1212202c496f2bd7bf90553df1092c3d60e1da2b4f07101be132c35c905ea",
+  "file": "dist/KeenVLESS-update-2026.08.19.1-storage-scheduler.tar.gz",
+  "size": 2450090,
+  "sha256": "02d0a76f3d64006fd50801d0d7f64ef38effa0b0da252cebdf2ed66b82a1eb86",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1787065959,
+  "created_at": 1787131828,
   "notes": [
-    "Replaces the single api.ipify WAN dependency with five parallel independent probes and records which endpoint succeeded",
-    "Separates TCP endpoint reachability from a verified full VPN tunnel and prevents a recent failed full-tunnel result from being overwritten by a lightweight probe",
-    "Never restarts a saved VPN selection command during page reload; the UI only resumes observation of a job that the router already knows",
-    "Binds every asynchronous selection idempotency key to one server and preserves it through browser polling",
-    "Makes VPN operation locks resistant to stale directories and operating-system PID reuse",
-    "Stops status and configuration APIs from returning the permanent web credential while preserving it when the masked UI field is left blank",
-    "Corrects post-update current-server verification, marks old health reports as stale and shows the age and kind of profile checks",
-    "Verifies rollback through the restored tunnel before reporting a successful recovery",
-    "Installed and verified on Home and Dacha without changing profiles, routes or VPN exit addresses",
-    "Verified through API, desktop Playwright and mobile Playwright; both routers retained working rollback chains"
+    "Disables XRay access logging so connection records no longer exhaust limited router storage",
+    "Stops rotating the active XRay stdout file and prevents deleted-inode disk leaks",
+    "Staggers route guard, watchdog, mobile watchdog and metrics jobs across different cron minutes",
+    "Routes crond messages to a bounded dedicated log when the installed BusyBox supports file logging",
+    "Adds numeric /opt free-space reporting with warning and critical thresholds",
+    "Keeps read-only health reports from invalidating otherwise reusable API caches",
+    "Embeds the verified 2026.08.18.4-vpn-correctness release for independent emergency rollback",
+    "Installed and verified on Home and Dacha without changing profiles, routes or VPN exit addresses"
   ]
 }
