@@ -1,22 +1,21 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.08.19.1-storage-scheduler",
+  "version": "2026.08.19.7-mobile-safe-controls",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.08.19.1-storage-scheduler.tar.gz",
-  "size": 2450090,
-  "sha256": "02d0a76f3d64006fd50801d0d7f64ef38effa0b0da252cebdf2ed66b82a1eb86",
+  "file": "dist/KeenVLESS-update-2026.08.19.7-mobile-safe-controls.tar.gz",
+  "size": 2452480,
+  "sha256": "00207c5e2c2c99d8177e3f7b3209cef8015c837866fa8f7a1b44aeb03b10a3ce",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1787131828,
+  "created_at": 1787138602,
   "notes": [
-    "Disables XRay access logging so connection records no longer exhaust limited router storage",
-    "Stops rotating the active XRay stdout file and prevents deleted-inode disk leaks",
-    "Staggers route guard, watchdog, mobile watchdog and metrics jobs across different cron minutes",
-    "Routes crond messages to a bounded dedicated log when the installed BusyBox supports file logging",
-    "Adds numeric /opt free-space reporting with warning and critical thresholds",
-    "Keeps read-only health reports from invalidating otherwise reusable API caches",
+    "Adds a reliable mobile VPN profile selector to the Servers tab",
+    "Preserves disabled states of unavailable and active-profile controls after background requests",
+    "Retries only safe read-only API calls after transient KeenDNS transport failures",
+    "Shows honest unchecked states in Doctor and Rescue before diagnostics are run",
+    "Finalizes update status atomically and waits for applied metadata before cleanup",
     "Embeds the verified 2026.08.18.4-vpn-correctness release for independent emergency rollback",
-    "Installed and verified on Home and Dacha without changing profiles, routes or VPN exit addresses"
+    "Installed and verified on Home and Dacha without changing selected VPN profiles"
   ]
 }
