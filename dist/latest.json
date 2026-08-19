@@ -1,21 +1,20 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.08.19.7-mobile-safe-controls",
+  "version": "2026.08.19.8-runtime-reliability",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.08.19.7-mobile-safe-controls.tar.gz",
-  "size": 2452480,
-  "sha256": "00207c5e2c2c99d8177e3f7b3209cef8015c837866fa8f7a1b44aeb03b10a3ce",
+  "file": "dist/KeenVLESS-update-2026.08.19.8-runtime-reliability.tar.gz",
+  "size": 1249841,
+  "sha256": "48767609888307e83ae973cdbe538d536af64800e217d9433648cfb433cdb475",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1787138602,
+  "created_at": 1787145620,
   "notes": [
-    "Adds a reliable mobile VPN profile selector to the Servers tab",
-    "Preserves disabled states of unavailable and active-profile controls after background requests",
-    "Retries only safe read-only API calls after transient KeenDNS transport failures",
-    "Shows honest unchecked states in Doctor and Rescue before diagnostics are run",
-    "Finalizes update status atomically and waits for applied metadata before cleanup",
-    "Embeds the verified 2026.08.18.4-vpn-correctness release for independent emergency rollback",
+    "Queues refresh requests instead of dropping deeper refreshes behind an active quick refresh",
+    "Cancels stale expert-tab reads and limits concurrent API calls",
+    "Loads saved health history on tab entry and runs live health diagnostics only on demand",
+    "Builds client connection policy data in one pass instead of spawning processes per client",
+    "Embeds a compact verified 2026.08.19.7-mobile-safe-controls emergency rollback",
     "Installed and verified on Home and Dacha without changing selected VPN profiles"
   ]
 }
