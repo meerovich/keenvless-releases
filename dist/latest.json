@@ -1,20 +1,20 @@
 {
   "app": "KeenVLESS",
-  "version": "2026.08.19.8-runtime-reliability",
+  "version": "2026.08.19.9-auth-hardening",
   "stable": true,
   "package_version": 1,
-  "file": "dist/KeenVLESS-update-2026.08.19.8-runtime-reliability.tar.gz",
-  "size": 1249841,
-  "sha256": "48767609888307e83ae973cdbe538d536af64800e217d9433648cfb433cdb475",
+  "file": "dist/KeenVLESS-update-2026.08.19.9-auth-hardening.tar.gz",
+  "size": 1251491,
+  "sha256": "37dbe158c7005401e8ddbc34532349af37cf797896b33b690eee30c119716a89",
   "bootstrap": "dist/keenvless-bootstrap.sh",
   "bootstrap_sha256": "0f14aa46f66e9745ce9749f3de5c85949f0d5521713a64b3d7a6ccd25fe21ccd",
-  "created_at": 1787145620,
+  "created_at": 1787146605,
   "notes": [
-    "Queues refresh requests instead of dropping deeper refreshes behind an active quick refresh",
-    "Cancels stale expert-tab reads and limits concurrent API calls",
-    "Loads saved health history on tab entry and runs live health diagnostics only on demand",
-    "Builds client connection policy data in one pass instead of spawning processes per client",
-    "Embeds a compact verified 2026.08.19.7-mobile-safe-controls emergency rollback",
+    "Requires POST for every API operation that changes router or panel state",
+    "Adds same-origin request validation for Yandex OAuth sessions",
+    "Removes the access credential from the browser address bar and history after loading",
+    "Adds a restrictive content security policy and disables referrer leakage",
+    "Embeds a compact verified 2026.08.19.8-runtime-reliability emergency rollback",
     "Installed and verified on Home and Dacha without changing selected VPN profiles"
   ]
 }
